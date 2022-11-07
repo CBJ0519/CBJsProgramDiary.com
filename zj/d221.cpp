@@ -6,7 +6,7 @@ int main(){
     int n;
     while(cin>>n){
         if(!n) break;  //假如n==0則break(技巧寫法)(not 0 = not false = true -> 啟動if)
-        priority_queue<int,vector<int>,greater<int>>digits;  //傳說中的優先佇列(C沒有所以很麻煩)
+        priority_queue<int,vector<int>,greater<int>>digits;  //傳說中的優先佇列,要從小到大排序(預設為大到小)(宣告方式有興趣可以去查)
 
         //讀資料放入digits
         for(int i=0;i<n;i++){
