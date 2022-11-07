@@ -13,7 +13,6 @@ int main(){
         //[start,end]區間的樹全部拔除(填0)
         for(int i=start;i<=end;i++) a[i]=0;
     }
-    int sum=0;
     //計算總和並輸出
     cout<<accumulate(a,a+L+1,0)<<"\n";
     return 0;
