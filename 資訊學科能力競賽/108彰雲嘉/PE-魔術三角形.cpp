@@ -15,12 +15,6 @@ bool legal(int i){
     return (i!=a && i!=b && i!=c);
 }
 bool cmp(string x,string y){
-
-    //cout<<"3\n";
-
-//    string x,y;
-//    for(int i:a)x+=(char)(i+'0');
-//    for(int i:b)y+=(char)(i+'0');
     return x<y;
 }
 void sattle(){
