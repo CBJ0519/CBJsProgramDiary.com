@@ -1,19 +1,22 @@
-#include<bits/stdc++.h>
-#define int long long
-#define double long double
-#define MAXI 100
+#include<iostream>
+#include<iomanip>  //內含fixed+setpresision()(控制輸出的小數點位數)
+
+//預先定義最大長寬
+#define MAXI 100  
 #define MAXJ 100
+
 using namespace std;
-int I,J;
+
+int I,J; 
 double table[MAXI][MAXJ];
-signed main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
+double SA[MAXI]={0}, SB[MAXJ]={0};  //若要讓陣列內容全部為0可以這樣寫
+double E[MAXI][MAXJ];
+
+int main(){
     cin>>I>>J;
-    double N=0;
-    double SA[MAXI]={0},SB[MAXJ]={0};
-    double E[MAXI][MAXJ];
-    double ans=0;
+    double N=0, ans=0; 
+    
+    //根據題意進行填表和運算
     for(int i=0;i<I;i++){
         for(int j=0;j<J;j++){
             double a;
@@ -24,12 +27,16 @@ signed main(){
             SB[j]+=a;
         }
     }
+    
+    //計算答案
     for(int i=0;i<I;i++){
         for(int j=0;j<J;j++){
-            E[i][j]=(double)(SA[i]*SB[j])/(double)N;
-            ans+=((double)(table[i][j]-E[i][j])*(double)(table[i][j]-E[i][j]))/(double)E[i][j];
+            E[i][j]=(SA[i]*SB[j])/N;
+            ans+=((table[i][j]-E[i][j])*(table[i][j]-E[i][j]))/E[i][j];
         }
     }
+    
+    //以小數點後2位的方式輸出(fixed + setprecision)
     cout<<fixed<<setprecision(2)<<ans<<"\n";
     return 0;
 }
