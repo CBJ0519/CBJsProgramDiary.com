@@ -1,7 +1,7 @@
 #include<iostream>
-#include<vector>
-#include<utility>
-#include<algorithm>
+#include<vector>  //內含vector
+#include<utility>  //內含pair
+#include<algorithm>  //內含max()(取兩數最大值)
 using namespace std;
 
 int m;  //天數
