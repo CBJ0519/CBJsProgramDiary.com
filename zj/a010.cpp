@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
     int n; cin>>n;  //讀入整數n
-    vector<pair<int,int>>tmp;  //儲存{質因數,次方}
+    vector<pair<int,int>>tmp;  //用來儲存{質因數,次方}
     
     for(int i=2;i<1e9;i++){  //從2跑到無限大(此處設無限大為1e9)
         if(n==1) break;  //終止條件
