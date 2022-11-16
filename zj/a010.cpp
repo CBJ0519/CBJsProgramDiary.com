@@ -25,7 +25,7 @@ int main(){
     for(int i=0;i<tmp.size();i++){
         if(i) cout<<" * "; //除了第一次輸出以外，其他次都要先在前面加上 *
         
-        //取出有用到的質因數和次方數分別存入n和cnt
+        //取出有用到的質因數和次方數(存於tmp)分別存入n和cnt
         int n=tmp[i].first;
         int cnt=tmp[i].second;
       
