@@ -12,7 +12,7 @@ int main(){
         if(n==1) break;  //終止條件
       
         int cnt=0;  //while迴圈執行次數=次方數
-        while(not (n%i)){  //假如n%i==0 (not 0 = true)
+        while(not (n%i)){  //假如n%i==0，表示可整除 (not 0 = true)
             cnt++;  //次方++
             n/=i;  //更新n
         }
