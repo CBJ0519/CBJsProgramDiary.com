@@ -11,7 +11,7 @@ string sum(string s){  //計算陣列總和，並回傳總和轉成字串的結�
     return ret;  //回傳ret
 }
 
-string f(string s){
+string f(string s){  //題目中的f()
     if(s.length()==1) return s;  //題目所述的終止條件
     return f(sum(s));  //遞迴呼叫f(sum(s)) (依題目所述)
 }
